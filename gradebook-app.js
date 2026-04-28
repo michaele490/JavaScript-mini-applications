@@ -49,7 +49,8 @@ function studentMsg(grades, studentGrade) {
   
   const avg = getAverage(grades);
   const pass = hasPassingGrade(studentGrade);
-  const msg = `Class average: ${avg}. Your grade: ${studentGrade}.`;
+  const grade = getGrade(studentGrade);
+  const msg = `Class average: ${avg}. Your grade: ${grade}.`;
 
   if (pass) {
     return (msg + " You passed the course.");
@@ -59,7 +60,7 @@ function studentMsg(grades, studentGrade) {
 
 }
 
-//const classGrades = [20, 80, 77, 89, 65];
-//const myGrade = 99;
-//const msg = studentMsg(classGrades, myGrade);
-//console.log(msg);
+const classGrades = [92, 88, 12, 77, 57, 100, 67, 38, 97, 89];
+const myGrade = 37;
+const msg = studentMsg(classGrades, myGrade);
+console.log(msg);
