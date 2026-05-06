@@ -39,7 +39,7 @@ function sortByYear(book1, book2) {
 }
 
 function latestDecade(collection) {
-  return collection.releaseYear >= 2020;
+  return collection.releaseYear <= 2020;
 }
 
 const filteredBooks = books.filter(latestDecade);
